@@ -115,7 +115,7 @@ details ul{margin:10px 0 4px;padding-left:20px;color:var(--muted);display:flex;f
     <ul>
       <li>Средняя комиссия: Pay IN 11,93%, Pay OUT 1% — по текущему отчёту.</li>
       <li>Цена переноса: 40% × 11,93% = 4,772%. Pay IN засчитывается 7,158%, Pay OUT — 5,772%.</li>
-      <li>Рентабельность 66,96% — после потерь и OPEX, средняя по компании.</li>
+      <li>Рентабельность 69,82% — после потерь и OPEX, средняя по компании (таблица, октябрь).</li>
       <li>База стороны = засчитанная комиссия × рентабельность. Бонус = 8% от базы.</li>
       <li>KPI: 3 млн фиата в день на каждую сторону ≈ 1 млн USDT в месяц.</li>
     </ul>
@@ -127,10 +127,10 @@ details ul{margin:10px 0 4px;padding-left:20px;color:var(--muted);display:flex;f
 <script>
 (function(){
   // Model constants (approved 05.11.2026)
-  var RATE_IN = 0.1193, RATE_OUT = 0.01, SHARE = 0.40, PROFIT = 0.6696, BONUS = 0.08;
+  var RATE_IN = 0.1193, RATE_OUT = 0.01, SHARE = 0.40, PROFIT = 0.6982, BONUS = 0.08;
   var PRICE = SHARE * RATE_IN;                      // 0.04772
-  var BASE_IN = (RATE_IN - PRICE) * PROFIT;         // ≈ 0.04793
-  var BASE_OUT = (RATE_OUT + PRICE) * PROFIT;       // ≈ 0.03865
+  var BASE_IN = (RATE_IN - PRICE) * PROFIT;         // ≈ 0.04998
+  var BASE_OUT = (RATE_OUT + PRICE) * PROFIT;       // ≈ 0.04030
 
   function bonusOf(inV, outV){ return BONUS * (inV * BASE_IN + outV * BASE_OUT); }
 
